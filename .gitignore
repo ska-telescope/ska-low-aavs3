@@ -1,0 +1,7 @@
+__pycache__/
+
+site/output
+
+charts/*/charts/*
+Chart.lock
+manifests.yaml

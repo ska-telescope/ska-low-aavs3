@@ -1,0 +1,7 @@
+apiVersion: v2
+name: ska-low-aavs3-landing
+description: A Helm chart for the AAVS3 landing page web server
+type: application
+version: 0.0.0
+appVersion: 0.0.0
+icon: https://www.skatelescope.org/wp-content/uploads/2016/07/09545_NEW_LOGO_2014.png
