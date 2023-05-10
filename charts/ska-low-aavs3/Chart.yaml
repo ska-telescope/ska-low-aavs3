@@ -9,3 +9,23 @@ dependencies:
   - name: ska-low-aavs3-landing
     version: 0.0.0
     repository: file://../ska-low-aavs3-landing
+  - name: ska-low-mccs-spshw
+    version: 0.5.0
+    repository: https://artefact.skao.int/repository/helm-internal
+  - name: ska-low-mccs-daq
+    version: 0.3.0
+    repository: https://artefact.skao.int/repository/helm-internal
+  - name: ska-taranta
+    version: 1.0.29
+    repository: https://artefact.skao.int/repository/helm-internal
+    condition: ska-taranta.enabled
+  - name: ska-taranta-auth
+    version: 0.1.5
+    repository: https://artefact.skao.int/repository/helm-internal
+    condition: ska-taranta-auth.enabled
+  - name: ska-tango-util
+    version: 0.3.23
+    repository: https://artefact.skao.int/repository/helm-internal  
+  - name: ska-tango-base
+    version: 0.3.10
+    repository: https://artefact.skao.int/repository/helm-internal

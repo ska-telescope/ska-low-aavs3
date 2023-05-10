@@ -27,5 +27,8 @@ oci-pre-build: install-pelican site-build-for-publish
 ########################################
 ## k8s / Helm
 
+# Temporarily adding ska-low-mccs-daq so that it
+K8S_CHARTS = ska-low-mccs-daq ska-low-aavs3
+
 include .make/k8s.mk
 include .make/helm.mk
