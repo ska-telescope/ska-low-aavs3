@@ -1,0 +1,55 @@
+
+global:
+  sub-system:
+    ska-tango-base:
+      enabled: false
+  minikube: false
+  cluster_domain: au-aavs3.skao.int
+  tango_host: tango-databaseds:10000
+  facility: aavs3
+
+ska-low-mccs-spshw:
+  mccs_cli:
+    enabled: false
+  facility:
+    subracks:
+      instances:
+        1:
+          host: 10.0.10.32
+          port: 8081
+    tpms:
+      instances:
+        1:
+          host: 10.0.10.162
+          port: 10000
+          version: tpm_v1_6
+          subrack: "1"
+          subrack_bay: 3
+        2:
+          host: 10.0.10.164
+          port: 10000
+          version: tpm_v1_6
+          subrack: "1"
+          subrack_bay: 7
+  deviceServers:
+    subracks:
+      logging_level_default: 5
+    tpms:
+      logging_level_default: 5
+
+ska-low-mccs-daq:
+  storage:
+    - name: daq-data
+      size: "250Mi"
+  receivers:
+    1:
+      receiver_interface: net1
+      receiver_ip: ""
+      receiver_port: 5660
+      logging_level_default: 5
+      storage: daq-data
+      server_annotations:
+        k8s.v1.cni.cncf.io/networks: kube-system/aavs3-sps
+
+ska-taranta:
+  enabled: true
