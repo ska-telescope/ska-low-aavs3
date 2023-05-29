@@ -2,4 +2,4 @@ image:
   registry: registry.gitlab.com/ska-telescope/ska-low-aavs3
   # registry: artefact.skao.int
   name: ska-low-aavs3
-  tag: 0.0.0-dev.cac5c9749
+  tag: 0.0.0-dev.cead9913e
